@@ -12,6 +12,9 @@ const Missions = require('./models/marsMissions');
 // * Bonus: add static css to style the pages
 
 
+app.get('/', (req, res) =>{
+  res.send('<a href="/missions">Mars missions</a>')
+})
 app.get('/missions', (req, res) =>{
   res.render('index.ejs', {Missions})
 })
